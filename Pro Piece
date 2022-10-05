@@ -23,8 +23,5 @@ local Toggle = Section:CreateToggle('Set Walkspeed', false, Color3.fromRGB(0, 12
         local ohString1 = "M1"
 
 game:GetService("Players").LocalPlayer.Backpack.Combat.Server.RemoteEvent:FireServer(ohString1)
-         end)
      end
 end)
-
-
