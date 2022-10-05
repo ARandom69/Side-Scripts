@@ -10,7 +10,7 @@ local Slider = Section:CreateSlider('Walkspeed', 0, 250, 16, Color3.fromRGB(0, 1
      WalkSpeedValue = v
 end)
 
-local Toggle = Section:CreateToggle('Set Walkspeed', false, Color3.fromRGB(0, 125, 255), 0.25, function(v)
+local Toggle = Section:CreateToggle('Set Walkspeed', true, Color3.fromRGB(0, 125, 255), 0.25, function(v)
     State = t
     if State then
         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = WalkSpeedValue
