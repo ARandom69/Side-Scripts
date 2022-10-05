@@ -10,9 +10,21 @@ local Slider = Section:CreateSlider('Walkspeed', 0, 250, 16, Color3.fromRGB(0, 1
      WalkSpeedValue = v
 end)
 
-local Toggle = Section:CreateToggle('Set Walkspeed', true, Color3.fromRGB(0, 125, 255), 0.25, function(v)
+local Toggle = Section:CreateToggle('Set Walkspeed', false, Color3.fromRGB(0, 125, 255), 0.25, function(t)
     State = t
     if State then
         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = WalkSpeedValue
     end
 end)
+
+local Toggle = Section:CreateToggle('Set Walkspeed', false, Color3.fromRGB(0, 125, 255), 0.25, function(t)
+    Killaura = t
+    while Killaura do wait()
+        local ohString1 = "M1"
+
+game:GetService("Players").LocalPlayer.Backpack.Combat.Server.RemoteEvent:FireServer(ohString1)
+         end)
+     end
+end)
+
+
