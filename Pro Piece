@@ -1,20 +1,17 @@
-local MangoLib = loadstring(game:HttpGet("https://pastebin.com/raw/N3sKKx0a"))()
+local Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/VisualRoblox/Roblox/main/UI-Libraries/Visual%20UI%20Library/Source.lua'))()
 
-spawn(function()
-MangoLib:Notify("System", "Script Loading Up!!")
+local Window = Library:CreateWindow('Nigger Hub', 'Pro Piece', 'Key System', 'rbxassetid://10618928818', false, 'VisualUIConfigs', 'Default')
+
+local Tab = Window:CreateTab('Key System', true, 'rbxassetid://3926305904', Vector2.new(524, 44), Vector2.new(36, 36))
+
+local Section = Tab:CreateSection('Speed')
+
+local Slider = Section:CreateSlider('Walkspeed', 0, 250, 16, Color3.fromRGB(0, 125, 255), function(v)
+     WalkSpeedValue = v
 end)
 
-local TabFarmer = MangoLib:Tab("Autofarm")
-local TabMiscer = MangoLib:Tab("Misc")
-
-TabMiscer:Slider("WalkSpeed", 16, 250, 50, function(v)
-    WalkSpeedValue = v
-end)
-
-TabMiscer:Toggle("Toggle WalkSpeed", function(v)
+local Toggle = Section:CreateToggle('Set Walkspeed', false, Color3.fromRGB(0, 125, 255), 0.25, function(v)
     State = t
     if State then
         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = WalkSpeedValue
-    end
 end)
-
