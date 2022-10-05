@@ -1,0 +1,20 @@
+local MangoLib = loadstring(game:HttpGet("https://pastebin.com/raw/N3sKKx0a"))()
+
+spawn(function()
+MangoLib:Notify("System", "Script Loading Up!!")
+end)
+
+local TabFarmer = MangoLib:Tab("Autofarm")
+local TabMiscer = MangoLib:Tab("Misc")
+
+TabMiscer:Slider("WalkSpeed", 16, 250, 50, function(v)
+    WalkSpeedValue = v
+end)
+
+TabMiscer:Toggle("Toggle WalkSpeed", function(v)
+    State = t
+    if State then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = WalkSpeedValue
+    end
+end)
+
